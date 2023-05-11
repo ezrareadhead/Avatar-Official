@@ -1,3 +1,5 @@
+// Carousel Script
+
 const carousel = document.querySelector('.carousel');
 const container = document.querySelector('.carousel-container');
 const items = document.querySelectorAll('.carousel-item');

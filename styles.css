@@ -1,130 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:wght@300;400;700&display=swap');
+
 /* General styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.3s ease;
+ }
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
   
-  body {
-    background-color: #00070F;
-    color: #f2f2f2;
-    font-family: 'Raleway', sans-serif;
-  }
-  
-  /* Header styles */
-  header {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 2rem 4rem;
-    position: fixed;
-    z-index: 100;
-    font-family: 'Cormorant Garamond', serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1em;
-    letter-spacing: 0.25em;
-    width: 100%;
-    padding-left: 0 auto;
-  }
+body {
+  background-color: #00070F;
+  color: #f2f2f2;
+  font-family: 'Raleway', sans-serif;
+}
 
-  nav{
-    width: 100%;
-    padding-left: 0 auto;
-    justify-content: space-between;
-  }
-  
-  .header{
-    width: 100%;
-    padding-left: 0 auto;
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
-  }
+h1{
+  font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
 
-  header a {
-    color: #fff;
-    text-decoration: none;
-  }
+h4{
+  font-size: 1em;
+  color: #6CADEF;
+  font-weight: regular;
+  padding-bottom: 1em;
+  font-style: italic;
+}
+
+span{
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+p{
+  font-size: 1.25rem;
+}
+
+
+/* Navigation styles */
+header {
+  padding: 2rem 4rem;
+  position: fixed;
+  z-index: 100;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: bold;
+  width: 100%;
+}
+
+nav{
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 20px;
+  filter: drop-shadow( 0 0 5px rgba(0, 0, 0, 0.5));
+}
   
-  header nav ul {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-  }
-  
-  header nav ul li {
-    margin-right: 2rem;
-    filter: drop-shadow( 0 0 5px rgba(0, 0, 0, 0.5));
-  }
-  
-  header nav ul li:last-child {
-    margin-right: 0;
-  }
-  
-  header nav ul li a:hover {
-    color: #6CADEF;
+header nav ul li a:hover {
+  color: #6CADEF;
   text-shadow:0px 0px 30px #6CADEF;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  }
-  
-a{
-  color: inherit;
 }
 
-  /* Hero section styles */
-  .hero {
-    position: relative;
-    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-    height: 100vh;
-    margin: 0 0 0 0;
-  }
-  
-  .hero img {
-    width: 50%;
-    height: auto;
-    padding-left: 0 auto;
-  }
-  
-  .hero h1 {
-    font-size: 5rem;
-    text-align: left;
-    color: #fff;
-    padding-left: 0;
-  }
-  
-  .hero button {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    color: #0a192f;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-  }
+/* Sidebar section styles */
+.sidebar {
+  width: 80px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
 
-    /* Character cards section styles */
+.icon {
+  margin: 10px 0;
+  font-size: 20px;
+  height: 40px;
+  transition: all 0.3s ease;
+  filter: drop-shadow( 0 0 5px rgba(0, 0, 0, 0.5));
+}
 
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Hero section styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  background-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/avatar-series-jake-sully-and-neytiri-wallpaper-3554x1999_53.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  height: 100vh;
+  margin: 0 0 0 0;
+}
+  
+.hero h1 {
+  font-size: 5rem;
+  text-align: left;
+}
+
+.tagline {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+  margin-left: 0 auto;      
+}
+
+.tagline h2{
+  text-align: end;
+  font-size: 2.5em;
+}
+
+.fa-circle-play{
+  opacity: 0.7;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.fa-circle-play:hover{
+  transform: scale(1.1);
+}
+
+/* Spacer section styles */
+.symbol{
+  width: 2.5vw;
+}
+
+.spacer{
+  display: flex;
+  flex-direction: column;
+  margin: 5em 0;
+  align-items: center;
+}
+
+.spacer p{
+  max-width: 1000px;
+}
+
+#highlight{
+  background: -webkit-linear-gradient(90deg, rgba(108,173,239,1) 0%, rgba(38,85,166,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Character cards section styles */
 #characters{
   row-gap: 2em;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding-bottom: 5rem;
-
 }
 
 .characters {
@@ -133,18 +197,11 @@ a{
   justify-content: space-between;
   overflow-x: scroll;
   padding: 0rem 5rem;
-
 }
 
 .characters::-webkit-scrollbar {
   display: none;
 }
-
-.symbol{
-  width: 2.5vw;
-  text-align: center;
-}
-
 
 .card-container{
   display: flex;
@@ -154,17 +211,9 @@ a{
 }
 
 .card {
-  width: calc(20vw);
-  margin-bottom: 2rem;
-  /* border-radius: 30% 30% 0.5rem 0.5rem; */
+  width: 20vw;
   overflow: hidden;
-  object-fit: fill;
   background-color: #fff;
-  position: relative;
-  padding-bottom: 1em;
-
-  /* -webkit-mask-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/8.png");
-  mask-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/8.png"); */
 }
 
 .card:hover img {
@@ -179,30 +228,6 @@ a{
   transition: transform 0.2s ease-in-out;
 }
 
-.card img:after{
-  background: linear-gradient(to top, rgb(5,85,134), rgba(181,181,181, 0.1));
-
-}
-  
-
-
-.slant .polygon {
-  fill: #fff;
-  z-index: 100;
-  width: 110%;
-}
-
-.polygon{
-  transform: translateY(-105%);
-  width: 101%;
-  position: relative;
-}
-
-.card p {
-  padding: 1rem 2rem;
-  color: #00070F;
-}
-
 .card h3 {
   font-size: 1.5rem;
   color: #2655A6;
@@ -211,776 +236,53 @@ a{
   position: relative;
 }
 
-h1{
-  font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-
-  
-  /* News and updates section styles */
-  .news {
-    padding: 4rem 2rem;
-    background-color: #00070F;
-  }
-  
-  .news h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .news ul {
-    list-style: none;
-  }
-  
-  .news li {
-    margin-bottom: 1.5rem;
-  }
-  
-  .news a {
-    color: #0a192f;
-    text-decoration: none;
-  }
-  
-  .news a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Reviews and analysis section styles */
-  
-  .reviews h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .reviews ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .reviews li {
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    width: calc(33.33% - 2rem);
-  }
-  
-  .reviews li:last-child {
-    margin-right: 0;
-  }
-  
-  .reviews a {
-    color: #0a192f;
-    text-decoration: none;
-  }
-  
-  .reviews a:hover {
-    text-decoration: underline;
-  }
-  
-  .review {
-    border: 1px solid #e0e0e0;
-    padding: 1.5rem;
-  }
-  
-  .review h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .review p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-
-  
-  #reviews span {
-    text-transform: uppercase;
-    font-family: 'Cormorant Garamond', serif;
-  }
-
-  #reviews h1{
-    width: max-content;
-  }
-  
-  /* Interviews and profiles section styles */
-  .interviews {
-    padding: 4rem 2rem;
-  }
-  
-  .interviews h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-/* Events and promotions section */
-
-.events {
-    padding: 50px;
-  }
-  
-  .events h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .events .event-item {
-    display: flex;
-    margin-bottom: 40px;
-  }
-  
-  .events .event-item img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-right: 30px;
-  }
-  
-  .events .event-item .event-info {
-    flex: 1;
-  }
-  
-  .events .event-item .event-info h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .events .event-item .event-info p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .events .event-item .event-info a {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-  
-  .events .event-item .event-info a:hover {
-    background-color: #0056b3;
-  }
-  
-  .events .countdown {
-    margin-top: 30px;
-  }
-  
-  .events .countdown .countdown-timer {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .events .countdown .countdown-timer div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 30px;
-  }
-  
-  .events .countdown .countdown-timer div span {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .events .countdown .countdown-timer div p {
-    font-size: 18px;
-  }
-  
-  .events .calendar {
-    margin-top: 50px;
-  }
-  
-  .events .calendar h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .events .calendar table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .events .calendar table td {
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .events .calendar table td:not(.disabled):hover {
-    background-color: #f2f2f2;
-    cursor: pointer;
-  }
-  
-  .events .calendar table .today {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .events .calendar table .selected {
-    background-color: #0056b3;
-    color: #fff;
-  }
-  
-  .events .calendar table .disabled {
-    color: #a9a9a9;
-  }
-  
-  /* Footer */
-  
-  footer {
-    background-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/3687afc2759a1e990b531dab7cab155b0e-avatar-2.2x.rhorizontal.w700.jpg.webp");
-    color: #fff;
-    padding: 5em;
-    text-align: center;
-    height: fit-content;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
-  }
-  
-  .footer p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .footer ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .footer ul li a {
-    color: #fff;
-    transition: all 0.3s ease;
-  }
-  
-  .footer ul li a:hover {
-    color: #007bff;
-  }
-  
-  .footer .logo {
-    margin-bottom: 30px;
-  }
-  
-  .footer .logo img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #007bff;
-  }
-  
-/* Reviews and analysis section */
-
-
-#reviews {
-    margin: 5em 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .review-heading {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .review-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 40px;
-    margin-bottom: 60px;
-  }
-  
-  .review-card {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .review-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .review-body {
-    padding: 20px;
-  }
-  
-  .review-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  .review-text {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .review-author {
-    font-size: 16px;
-    font-weight: 600;
-    color: #555;
-  }
-  
-  .review-rating {
-    font-size: 16px;
-    font-weight: 600;
-    color: #555;
-    margin-left: 10px;
-  }
-  
-  /* Interviews and profiles section */
-  
-  .interview-section {
-    padding: 50px 0;
-  }
-  
-  .interview-heading {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .interview-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 40px;
-    margin-bottom: 60px;
-  }
-  
-  .interview-card {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .interview-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .interview-body {
-    padding: 20px;
-  }
-  
-  .interview-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  .interview-text {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .interview-author {
-    font-size: 16px;
-    font-weight: 600;
-    color: #555;
-  }
-  
-  .interview-date {
-    font-size: 16px;
-    font-weight: 600;
-    color: #555;
-    margin-left: 10px;
-  }
-  
-  /* Multimedia content section */
-  
-  .media-section {
-    padding: 50px 0;
-  }
-  
-  .media-heading {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .media-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 40px;
-    margin-bottom: 60px;
-  }
-  
-  .media-card {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .media-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .media-body {
-    padding: 20px
-  }      
-
- /* Mobile-first responsive styles */
-
-/* Make images and videos responsive */
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Use a media query to adjust styles for screens smaller than 768px */
-@media (max-width: 768px) {
-    /* Adjust the header */
-    .header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    /* Adjust the logo */
-    .logo img {
-      width: 100%;
-      max-width: 300px;
-    }
-  
-    /* Adjust the navigation */
-    nav {
-    width: 100%;
-      margin-top: 1em;
-      text-align: center;
-    }
-  
-    /* Adjust the sections */
-    section {
-      padding: 2em;
-    }
-  
-    /* Adjust the hero section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 50vh;
-    }
-  
-    .hero img {
-      width: 100%;
-      max-width: 400px;
-      margin-bottom: 1em;
-    }
-  
-    /* Adjust the tagline */
-    .tagline h1 {
-      font-size: 2.5em;
-      z-index: 100;
-    }
-  
-    
-  
-    .cta {
-      font-size: 1.2em;
-      padding: 0.5em 1em;
-    }
-  
-    /* Adjust the multimedia and fan content sections */
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-  }
-
-  
-  /* CSS for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-    /* Header */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    /* Navigation */
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-    
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      margin: 0;
-    }
-    
-    nav li {
-      margin: 0 20px;
-    }
-    
-    /* Hero section */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      position: relative;
-      background-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/avatar-series-jake-sully-and-neytiri-wallpaper-3554x1999_53.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 0;
-    }
-    
-    .tagline {
-      display: flex;
-      flex-direction: column;
-      flex-basis: 60%;
-      margin-left: 0 auto;      
-    }
-
-    .fa-circle-play{
-      opacity: 0.7;
-      font-size: 4rem;
-      cursor: pointer;
-    }
-    
-    .fa-circle-play:hover{
-      transform: scale(1.1);
-    }
-
-   
-
-  h1, h2, h3 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-  }
-
-
-  
-  #shop{
-    background-color: #fff;
-    color: #000;
-  }
-
-  .banner{
-    width: 100vw;
-    height: fit-content;
-    background-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/Avatar-The-Way-of-Water_1-1-scaled-1-1080x605.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-  }
-
-  /* .banner div{
-    width: 50vw;
-    height: 100%;
-    overflow: hidden;
-  } */
-  
-    .banner-container .banner{
-      -webkit-filter: blur(20px);
-      position: absolute;
-      top: 0%;
-      height: 100%;
-      padding: 0;
-    }
-
-  .banner-container{
-    width: 50%;
-    overflow: hidden;
-    position: relative;
-    height: max-content;
-  }
-
-  .banner-text{
-    padding: 5em 1em;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: max-content;
-    justify-content: space-between;
-    z-index: 100;
-
-    align-items: center;
-  }
-
-span{
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: 'Cormorant Garamond', serif;
-  }
-
-  .banner-container h1, .banner-container i{
-    position: relative;
-    margin-top: 0 auto;
-    
-  }
-
-  .sidebar {
-    width: 80px;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    z-index: 100;
-  }
-  
-  .icon {
-    margin: 10px 0;
-    font-size: 20px;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    filter: drop-shadow( 0 0 5px rgba(0, 0, 0, 0.5));
-    text-decoration: none;
-  }
-  
-  .icon:hover {
-    transform: scale(1.1);
-  }
-  
-  .flower{
-    width: 50vw;
-mix-blend-mode: exclusion;
-  }
-
-  /* This rule centers the merchandise section on the page */
-.shop{
-  display: flex;
-  flex-direction: column;
-  padding: 2em 5em;
-  justify-content: baseline;
-
-}
-
-/* This rule makes the grid container responsive */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2em;
-  margin-top: 40px;
-  justify-content:first baseline;
-  position: relative;
-}
-
-.grid-item{
-  display: flex;
-  flex-direction: column;
-  justify-content:end;
-  align-items: center;
-  row-gap: 1em;
-}
-
-.grid-item:hover img{
-  transform: scale(1.1);
-}
-/* This rule ensures the images are centered and not stretched */
-.grid-item img {
-  display: block;
-  max-width: 80%;
-  height: auto;
-  filter: drop-shadow(7px 7px 7px #000);
-  -webkit-filter: drop-shadow(7px 7px 7px #000);
-}
-
-/* This rule adjusts the font size and line height on smaller screens */
-@media screen and (max-width: 600px) {
-  .grid-item-title {
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
-
-  .grid-item-description {
-    font-size: 1rem;
-    line-height: 1.2;
-  }
-}
-
-h4{
-  font-size: 1em;
-  color: #6CADEF;
-  font-weight: regular;
-  padding-bottom: 1em;
-  font-style: italic;
-}
-
-.visual {
-  height: 50vh;
-  background-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/layered-waves-haikei.svg");
+/* Banner styles */
+.banner{
   width: 100vw;
-  object-fit: fill;
+  height: fit-content;
+  background-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/Avatar-The-Way-of-Water_1-1-scaled-1-1080x605.png");
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100vw;
+  background-size: cover;
+  background-position: right;
 }
 
-.tagline h2{
-  text-align: end;
-  font-size: 2.5em;
+.banner-container .banner{
+  -webkit-filter: blur(20px);
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  padding: 0;
 }
 
+.banner-container{
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+  height: max-content;
+}
+
+.banner-text{
+  padding: 5em 1em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: max-content;
+  justify-content: space-between;
+  z-index: 100;
+  align-items: center;
+}
+
+.banner-container h1, .banner-container i{
+  position: relative;
+  margin-top: 0 auto;
+}
+
+/* Trailer section styles */
 iframe{
   border: none;
 }
-
-.spacer{
-  display: flex;
-  flex-direction: column;
-  margin: 5em 0;
-  left: 0 auto;
-  align-items: center;
-  justify-content: center;
-}
-
-.spacer p{
-  max-width: 1000px;
-}
-
-p{
-  font-size: 1.25rem;
-}
-
-#highlight{
-  background: -webkit-linear-gradient(90deg, rgba(108,173,239,1) 0%, rgba(38,85,166,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
+ 
+/* News carousel styles */
 .carousel {
   position: relative;
   width: 100%;
@@ -998,7 +300,6 @@ p{
   position: relative;
   flex: 1 0 100%;
   width: 100%;
-  height: 20vh;
   min-height: fit-content;
   background-position: end center;
   background-size: cover;
@@ -1055,17 +356,92 @@ p{
   margin: 0 10px;
   cursor: pointer;
   filter: drop-shadow( 0 0 5px rgba(0, 0, 0, 0.5));
-
 }
 
 .carousel-indicator.active {
   background-color: #2655A6;
 }
 
+/* Awards section */
+#awards {
+  margin: 5em 0;
+  display: flex;
+  align-items: center;
+}
+
 #symbol-2{
   margin-top: 2rem;
 }
 
+.flower{
+  width: 50vw;
+  mix-blend-mode: exclusion;
+}
+
+/* Merchandise section */
+.visual {
+  height: 50vh;
+  background-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/layered-waves-haikei.svg");
+  width: 100vw;
+  object-fit: fill;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+}
+
+#shop{
+  background-color: #fff;
+  color: #000;
+}
+
+.shop{
+  display: flex;
+  flex-direction: column;
+  padding: 2em 5em;
+  justify-content: baseline;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
+  margin-top: 40px;
+  justify-content:first baseline;
+  position: relative;
+}
+
+.grid-item{
+  display: flex;
+  flex-direction: column;
+  justify-content:end;
+  align-items: center;
+  row-gap: 1em;
+}
+
+.grid-item:hover img{
+  transform: scale(1.1);
+}
+
+.grid-item img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  filter: drop-shadow(7px 7px 7px #000);
+  -webkit-filter: drop-shadow(7px 7px 7px #000);
+}
+
+/* Footer Styles */
+footer {
+  background-image: url("/Users/ezrareadhead/Desktop/Avatar-Official/assets/images/3687afc2759a1e990b531dab7cab155b0e-avatar-2.2x.rhorizontal.w700.jpg.webp");
+  padding: 5em;
+  text-align: center;
+  height: fit-content;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+}
+
+/* Media query for smaller screens */
 @media screen and (orientation:portrait) {
 
   .banner{
